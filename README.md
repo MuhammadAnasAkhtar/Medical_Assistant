@@ -1,108 +1,110 @@
-# 🏥 Medical Assistant — AI-Powered Healthcare Information Retrieval
+# 🏥 Medical Assistant — AI-Powered Healthcare Chatbot
 
 <p align="center">
-  An intelligent medical chatbot powered by Generative AI and Retrieval-Augmented Generation (RAG).
+  An AI-powered healthcare information assistant built with Generative AI, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG).
 </p>
 
 <p align="center">
-  <b>Python · Flask · LangChain · Llama · Pinecone · Hugging Face</b>
+  Python • Flask • LangChain • Llama • Pinecone • Hugging Face
 </p>
 
 ---
 
-## Overview
+## 🚧 Project Status: Under Active Development
 
-**Medical Assistant** is an AI-powered conversational application designed to make healthcare-related information easier to access through natural language interactions.
+**Medical Assistant is currently under development and is NOT ready for production use or an official public launch.**
 
-The project implements a Retrieval-Augmented Generation (RAG) pipeline that combines semantic search, vector embeddings, document retrieval, and Large Language Models (LLMs) to generate context-aware responses based on indexed medical documents.
+I am actively working on developing, configuring, testing, improving, and preparing this project for a professional release.
 
-Instead of relying exclusively on the language model's pretrained knowledge, the application retrieves relevant information from a medical document collection and uses that context to generate responses.
+Currently, I have **no dedicated budget, external funding, or financial backing** for this project. Development is being carried out independently using available resources and tools.
 
-The application provides a web-based chatbot interface built with Flask, allowing users to interact with the system through conversational queries.
+My current priorities include:
 
-## Key Features
+- Improving application architecture and functionality.
+- Optimizing RAG pipelines and retrieval accuracy.
+- Testing LLM integrations and document processing.
+- Improving security, reliability, and performance.
+- Completing application configuration and deployment preparation.
+- Improving documentation and user experience.
+- Preparing for a professional public release.
 
-- **Retrieval-Augmented Generation (RAG):** Combines document retrieval with LLM-based response generation.
-- **Semantic Document Search:** Retrieves relevant medical information using vector similarity.
-- **LLM-Powered Conversations:** Uses a Llama-based language model for natural language question answering.
-- **Vector Database Integration:** Uses Pinecone for storing and retrieving document embeddings.
-- **Hugging Face Embeddings:** Converts document content into vector representations.
-- **Interactive Web Interface:** Provides a conversational interface using Flask.
-- **Context-Aware Responses:** Generates answers using relevant retrieved document content.
-- **Environment Configuration:** Supports environment variables for sensitive configuration values.
+**Public Release: Coming Soon**
 
-## System Architecture
+Features, configurations, and installation instructions may change during development. Contributions, suggestions, and feedback are welcome.
 
-The application follows a Retrieval-Augmented Generation architecture.
+---
+
+## 📌 About the Project
+
+Medical Assistant is an AI-powered conversational application designed to make healthcare-related information easier to access through natural language interactions.
+
+The project uses Retrieval-Augmented Generation (RAG) to combine document retrieval, semantic search, vector embeddings, and Large Language Models.
+
+Instead of relying entirely on pretrained model knowledge, the system retrieves relevant information from indexed medical documents and uses that context to generate responses.
+
+The application is built around Python, Flask, LangChain, Llama, Pinecone, and Hugging Face embeddings.
+
+The long-term objective is to develop a reliable and accessible healthcare information assistant using modern Generative AI technologies.
+
+## ✨ Key Features
+
+- **RAG Architecture:** Combines information retrieval with LLM-based response generation.
+- **Semantic Search:** Retrieves relevant information using vector embeddings.
+- **LLM Integration:** Uses Llama-based language models for conversational question answering.
+- **Vector Database:** Integrates Pinecone for vector storage and retrieval.
+- **Hugging Face Embeddings:** Supports semantic document representation.
+- **Flask Backend:** Provides the web application infrastructure.
+- **Context-Aware Responses:** Uses retrieved document context to support answer generation.
+- **Expandable Architecture:** Provides a foundation for future healthcare AI improvements.
+
+*Features and integrations are subject to ongoing development and testing.*
+
+## 🧠 System Architecture
+
+The intended RAG workflow:
 
 ```mermaid
 flowchart TD
     A[Medical Documents] --> B[Document Processing]
-    B --> C[Hugging Face Embeddings]
-    C --> D[(Pinecone Vector Database)]
+    B --> C[Text Chunking]
+    C --> D[Embedding Generation]
+    D --> E[(Pinecone Vector Database)]
 
-    E[User Question] --> F[Flask Chat Interface]
-    F --> G[Query Processing]
-    G --> H[Semantic Retrieval]
-    D --> H
-
-    H --> I[Relevant Document Context]
-    I --> J[Llama Language Model]
-    J --> K[Generated Response]
-    K --> F
-    F --> L[User]
+    F[User Question] --> G[Flask Interface]
+    G --> H[Query Processing]
+    H --> I[Semantic Retrieval]
+    E --> I
+    I --> J[Relevant Context]
+    J --> K[Llama Language Model]
+    K --> L[Generated Response]
+    L --> G
+    G --> M[User]
 ```
 
-## How It Works
-
-1. **Document Processing:** Medical documents are prepared for indexing.
-2. **Embedding Generation:** Hugging Face embedding models convert document content into numerical vectors.
-3. **Vector Storage:** Generated embeddings are stored in Pinecone.
-4. **User Query:** A user submits a healthcare-related question through the chatbot.
-5. **Semantic Retrieval:** The application searches Pinecone for relevant document segments.
-6. **Context Preparation:** Retrieved information is supplied as context to the language model.
-7. **Response Generation:** The Llama-based model generates a response using the retrieved context.
-8. **Response Delivery:** Flask delivers the generated response through the chatbot interface.
-
-## Technology Stack
+## ⚙️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Python | Core application development |
-| Flask | Web application and backend |
-| LangChain | LLM and RAG orchestration |
-| Llama | Language model |
+| Python | Core development |
+| Flask | Web application backend |
+| LangChain | RAG and LLM orchestration |
+| Llama | Language model integration |
 | Pinecone | Vector database |
-| Hugging Face | Embedding generation |
-| CTransformers | Local language model integration |
+| Hugging Face | Embedding models |
+| CTransformers | Local model integration |
 | NLP | Natural language processing |
-| dotenv | Environment configuration |
 
-## Project Structure
+## 📂 Repository
 
-```text
-Medical_Assistants/
-│
-├── data/                 # Medical document data
-├── model/                # Model-related resources
-├── src/                  # Application helper modules
-│
-├── static/               # Static frontend assets
-├── templates/            # HTML templates
-│
-├── app.py                # Main Flask application
-├── store_index.py        # Vector index management
-├── templates.py          # Prompt templates
-├── setup.py              # Project setup configuration
-├── requirements.txt      # Python dependencies
-├── trail.ipynb           # Development notebook
-│
-├── .gitignore
-├── LICENSE
-└── README.md
-```
+**GitHub Repository:**
 
-## Installation and Setup
+https://github.com/MuhammadAnasAkhtar/Medical_Assistants
+
+The repository contains the current development version of the project. Its structure and components may change as development progresses.
+
+## 🚀 Installation and Setup
+
+The following is the intended local setup workflow. Additional model and database configuration may be required depending on the current implementation.
 
 ### 1. Clone the Repository
 
@@ -118,15 +120,13 @@ cd Medical_Assistants
 python -m venv venv
 ```
 
-Activate the environment:
-
-**Windows:**
+Activate it on Windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Linux / macOS:**
+Linux/macOS:
 
 ```bash
 source venv/bin/activate
@@ -140,99 +140,105 @@ pip install -r requirements.txt
 
 ### 4. Configure Environment Variables
 
-Create a `.env` file in the project root directory.
+Create a `.env` file in the project root.
 
 ```env
 PINECONE_API_KEY=your_pinecone_api_key
 ```
 
-Replace the placeholder with your actual Pinecone API key.
+Use the actual configuration required by the application. Never commit API keys or private credentials.
 
-Never upload API keys or other sensitive credentials to GitHub.
+### 5. Configure the Vector Database
 
-### 5. Configure Pinecone
-
-Create a Pinecone index named:
-
-```text
-medical
-```
-
-Ensure that the index configuration is compatible with the embedding model used by the application.
+Configure your Pinecone account, index, embedding dimensions, and other settings according to the implementation.
 
 ### 6. Run the Application
 
-Start the Flask application:
+If the current Flask entry point is `app.py`:
 
 ```bash
 python app.py
 ```
 
-### 7. Access the Application
+If the application starts successfully, access its configured local address in your browser.
 
-Open your browser and navigate to:
+**Note:** Installation and execution instructions will be verified and finalized before the official release.
 
-```text
-http://localhost:8080
-```
+## 🛠️ Development Roadmap
 
-You can now interact with the medical chatbot.
+- [x] Initial project development.
+- [x] Initial RAG-based application implementation.
+- [ ] Review and improve project architecture.
+- [ ] Verify model and dependency compatibility.
+- [ ] Improve document ingestion and processing.
+- [ ] Optimize semantic retrieval.
+- [ ] Improve response quality and reliability.
+- [ ] Add source references for retrieved information.
+- [ ] Improve interface and user experience.
+- [ ] Complete security and configuration testing.
+- [ ] Finalize installation and deployment documentation.
+- [ ] Prepare the official public release.
 
-## Configuration Requirements
+## 💡 Future Vision
 
-Before running the application, ensure that:
-
-- Python and the required dependencies are installed.
-- Pinecone credentials are correctly configured.
-- The required Pinecone index exists.
-- Medical documents have been indexed.
-- The configured language model is available.
-- All environment variables are properly set.
-
-## Potential Applications
-
-- Medical document information retrieval.
-- Healthcare knowledge exploration.
-- Conversational access to medical documentation.
-- Educational healthcare information systems.
-- AI-powered document question-answering applications.
-
-## Future Improvements
+The long-term vision is to expand Medical Assistant into a more capable healthcare information platform.
 
 Potential improvements include:
 
-- Support for uploading and indexing new medical documents.
-- Improved conversational memory and chat history.
-- Source citations for retrieved medical information.
-- Better retrieval accuracy through hybrid search.
-- Document metadata filtering.
-- Evaluation of RAG response quality.
-- Improved user interface and accessibility.
-- Enhanced security and deployment capabilities.
+- Advanced RAG and hybrid retrieval.
+- Conversational memory.
+- Medical document uploads.
+- Source-grounded responses.
+- Better document management.
+- RAG evaluation and performance monitoring.
+- Improved user experience.
+- Scalable deployment infrastructure.
 
-## Limitations and Medical Disclaimer
+These are development goals, not claims of currently implemented functionality.
 
-This project is intended for educational purposes and healthcare information retrieval.
+## 🤝 Contributions and Feedback
 
-It is not a certified medical diagnostic system and should not be used as a substitute for professional medical advice, diagnosis, or treatment.
+Medical Assistant is an independently developed project.
 
-AI-generated responses may contain inaccurate or incomplete information. Always consult a qualified healthcare professional for medical decisions.
+Developers, AI engineers, researchers, and interested contributors are welcome to share:
 
-## License
+- Technical suggestions.
+- Bug reports.
+- Feature requests.
+- Architecture improvements.
+- Development feedback.
 
-This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Your feedback can help improve the project as it moves toward its first professional release.
 
-## Author
+## ⚠️ Medical Disclaimer
+
+This project is an experimental AI-based healthcare information retrieval application.
+
+It is not a certified medical device, diagnostic system, or substitute for professional medical advice, diagnosis, or treatment.
+
+AI-generated information may be inaccurate, incomplete, or misleading. Always consult qualified healthcare professionals for medical decisions.
+
+The application should not be used for emergency medical situations.
+
+## 📄 License
+
+See the [LICENSE](LICENSE) file for the project's licensing terms.
+
+## 👨‍💻 Developer
 
 **Muhammad Anas Akhtar**
 
 AI Engineer | Generative AI | RAG | Agentic AI | MLOps
 
-- GitHub: [@MuhammadAnasAkhtar](https://github.com/MuhammadAnasAkhtar)
-- Company: [TreliconAI](https://treliconai.com/)
+- GitHub: https://github.com/MuhammadAnasAkhtar
+- Company: https://treliconai.com/
 
 ---
 
 <p align="center">
-  <b>Built with Python and Generative AI.</b>
+  <b>Built with passion for Generative AI and practical innovation.</b>
+</p>
+
+<p align="center">
+  Medical Assistant — Currently in Development.
 </p>
